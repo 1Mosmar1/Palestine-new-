@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Modifié pour aligner en haut */
+    height: 100vh;
+    padding-top: 20vh; /* Ajout de marge en haut pour centrer en haut */
+}
+
+.container h1 {
+    text-align: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

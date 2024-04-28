@@ -1,0 +1,40 @@
+<div class="background-container" [style.backgroundImage]="backgroundImageUrl">
+    <div class="container">
+        <header>
+          <h1>Welcome to Palestine-APP</h1>
+          <a [routerLink]="'/app-login'">
+            <button class="btn btn-primary">Login</button>
+          </a>
+        </header>
+        <div class="form-container">
+          <h4>Inscription</h4>
+          <div>
+            <div class="form-group">
+              <label for="nom">Nom</label>
+              <input [(ngModel)]="utilisateur.nom" type="text" class="form-control" id="nom" name="nom" placeholder="Nom">
+            </div>
+            <div class="form-group">
+              <label for="prenom">Prénom</label>
+              <input [(ngModel)]="utilisateur.prenom" type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input [(ngModel)]="utilisateur.email" type="email" class="form-control" id="email" name="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label for="password">Mot de passe</label>
+              <input [(ngModel)]="utilisateur.mdp" type="password" class="form-control" id="mdp" name="mdp" placeholder="Mot de passe">
+            </div>
+            <div class="form-group">
+              <label for="telephone">Numéro de téléphone</label>
+              <input [(ngModel)]="utilisateur.tel" type="tel" class="form-control" id="tel" name="tel" placeholder="Numéro de téléphone">
+            </div>
+            <div class="form-group">
+              <label for="localisation">Localisation</label>
+              <input [(ngModel)]="utilisateur.loc" type="text" class="form-control" id="loc" name="loc" placeholder="Localisation">
+            </div>
+            <button (click)="submite()" class="btn btn-primary">S'inscrire</button>
+          </div>
+        </div>
+    </div>
+</div>

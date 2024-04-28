@@ -1,0 +1,78 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark"data-bs-target="#navbarSupportedContent">
+  <a class="navbar-brand" href="/admin">Admin</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/menu-lost-person">menu</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/add-lost-person">Ajouter</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/modify-lost-person">Modifier</a>
+          </li>
+      </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+    <div class="row">
+      <div class="col-md">
+        <br><br> <br>
+        <div class="card">
+          <div class="card-header">
+            <h2>Modification d'utilisateur</h2>
+          </div>
+          <div class="card-body">
+            <div class="mb-3">
+                <div class="mb-3">
+                  <label for="id" class="form-label">Nom d'utilisateur</label>
+                  <input
+                    class="form-control"
+                    list="list_id"
+                    id="id"
+                    placeholder="ID du produit à modifier"
+                  />
+                  <datalist id="list_id">
+                  </datalist>
+                </div>
+              </div>
+
+
+
+            <form class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label class="form-label">Nom</label>
+                    <input [(ngModel)]="utilisateur.nom" type="text" class="form-control" id="nom" name="nom"  required>
+                  </div>
+              <div class="mb-3">
+                <label class="form-label">Prenom</label>
+                <input [(ngModel)]="utilisateur.prenom" type="year" class="form-control" id="prenom" name="prenom" required>
+
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Numero de telephone</label>
+                <input [(ngModel)]="utilisateur.tel" type="text" class="form-control" id="tel" name="tel"  required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Adresse email</label>
+                <input [(ngModel)]="utilisateur.email" type="text" class="form-control" id="email" name="email"  required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Mot de passe</label>
+                <input [(ngModel)]="utilisateur.mdp" type="text" class="form-control" id="mdp" name="mdp" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Localisation</label>
+                <input [(ngModel)]="utilisateur.loc" type="text" class="form-control" id="loc" name="loc" required>
+              </div>
+              <button (click)="modifyutilisateur()" class="btn btn-success text-center">Modifier</button>
+              <button type="reset" class="btn btn-danger text-center btn btn-primary ml-2">Annuler</button>
+              
+            </form>
+</div>
+
